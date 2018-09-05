@@ -1,11 +1,31 @@
 doctype html
 html
-head
-	meta(name='viewport', content='width=device-width, initial-scale=1.0')
-	title= title
-	link(rel='stylesheet', href='/stylesheets/cosmo.css')
-	link(rel='stylesheet', href='/stylesheets/style.css')
-body
-	block content
+  head
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title= title
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")
+    //link(rel='stylesheet', href='/bootstrap/css/cosmo.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    .navbar.navbar-default.navbar-fixed-top
+      .container
+        .navbar-header
+          a.navbar-brand(href='/') Loc8r
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='#navbar-main')
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+        #navbar-main.navbar-collapse.collapse
+          ul.nav.navbar-nav
+            li
+              a(href='/about/') About
+    .container
+      block content
 
-script(src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js')
+      footer
+        .row
+          .col-xs-12
+             small &copy; Yicheng Jiang 2018
+
+    script(src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js')
+    script(src='/bootstrap/js/bootstrap.min.js')
