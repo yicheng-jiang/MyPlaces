@@ -1,0 +1,8 @@
+1. $http.get return not support success and error promise calls any more.
+Instead using then(success function, error function) instead in the new
+Angular
+
+2. The Mongoose model not support geoNear function any more, need use
+aggregate call with $geoNear instead
+
+
