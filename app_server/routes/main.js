@@ -9,7 +9,10 @@ var ctrlOthers = require('../controllers/others');
 //console.log("get ctrl.index");
 
 /* Locations pages */
-router.get('/', ctrlLocations.homelist);
+// router.get('/', ctrlLocations.homelist);  //+1 move to Angular from express
+router.get('/', ctrlOthers.angularApp);
+
+// following are redundant after using Angular routing
 router.get('/location/:locationid', ctrlLocations.locationInfo);
 router.get('/location/:locationid/reviews/new', ctrlLocations.addReview);
 router.post('/location/:locationid/reviews/new', ctrlLocations.doAddReview);
