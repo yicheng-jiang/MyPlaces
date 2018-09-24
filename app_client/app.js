@@ -1,10 +1,13 @@
+(function() {
 angular.module('myPlacesApp', ['ngRoute']);
 
 function config ($routeProvider) {
 	console.log("routeProvider is called");
 	$routeProvider
 		.when('/', {
-			templateUrl: 'home/home.view.html'
+			templateUrl: 'home/home.view.html',
+			controller: 'homeCtrl',
+			controllerAs: 'vm'
 		})
 		.otherwise({redirectTo: '/'});
 };
@@ -12,3 +15,4 @@ function config ($routeProvider) {
 angular
 	.module('myPlacesApp')
 	.config(['$routeProvider', config]);
+})();

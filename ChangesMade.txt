@@ -5,4 +5,27 @@ Angular
 2. The Mongoose model not support geoNear function any more, need use
 aggregate call with $geoNear instead
 
+3. For javascript function:
+
+var fn = function() {} 
+
+will have fn defined only after the line is excuted
+but for
+
+function fn() {}
+
+the function fn is defined as soon as its surrounding function or script is executed (due to hoisting).
+
+4. For javascript prototype, any object will have a prototype which will be the same between objects created for the same class
+
+person = function(first, last) {
+	this.firstName = first;
+	this.lastName = last;
+};
+
+person.prototype.fullname = function() { return this.firstName + " " + this.lastName;}
+
+p1 = new person("f1", "l1");
+p2 = new person("f2", "l2");
+p1.__prototo__ === p2.__prototo__
 
