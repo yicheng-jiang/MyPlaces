@@ -1,5 +1,5 @@
 (function() {
-	anguler
+	angular
 		.module('myPlacesApp')
 		.directive('navigation', navigation);
 

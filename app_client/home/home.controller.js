@@ -1,7 +1,7 @@
 (function() { 
 	angular
-	.module('myPlacesApp')
-	.controller('homeCtrl', homeCtrl);
+		.module('myPlacesApp')
+		.controller('homeCtrl', homeCtrl);
 
 // function homeCtrl ($scope) {  //+1 remove $scope after using view model +1 add back $scope after using vm
 homeCtrl.$inject = ['$scope', 'myplacesData', 'geolocation'];
@@ -21,6 +21,7 @@ function homeCtrl ($scope, myplacesData, geolocation) {
 		var lat = position.coords.latitude, 
 			lng = position.coords.longitude;
 		vm.message = "Searching for nearby places";
+
 		myplacesData.locationByCoords(lat, lng)
 			.then(function(data) {
 				// console.log("data: " + JSON.stringify(data));
