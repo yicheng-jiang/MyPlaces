@@ -1,5 +1,6 @@
 (function() {
 	angular.module('myPlacesApp', ['ngRoute', 'ngSanitize', 'ui.bootstrap']);
+	console.log("angular module defined");
 
 	function config ($routeProvider, $locationProvider) {
 		console.log("routeProvider is called");

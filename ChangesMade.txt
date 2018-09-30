@@ -29,3 +29,4 @@ p1 = new person("f1", "l1");
 p2 = new person("f2", "l2");
 p1.__prototo__ === p2.__prototo__
 
+5. $modal needs to be $uibModal and $modalInstance needs to be $uibModalInstance

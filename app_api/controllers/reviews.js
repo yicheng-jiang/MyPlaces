@@ -8,6 +8,7 @@ var sendJsonResponse = function(res, status, content) {
 
 module.exports.reviewsCreate = function (req, res) {
 	var locationid = req.params.locationid;
+	console.log("reviewsCreate called: " + locationid);
 	if (locationid) {
 		Loc
 			.findById(locationid)
@@ -164,6 +165,7 @@ var doAddReview = function(req, res, location) {
 			} else {
 				updateAverageRating(location._id);
 				thisReview = location.reviews[location.reviews.length - 1];
+				console.log("doAddReview: " + thisReview.reviewText);
 				sendJsonResponse(res, 201, thisReview);
 			}
 		});

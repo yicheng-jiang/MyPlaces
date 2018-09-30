@@ -32,7 +32,7 @@ var appClientFiles = [
 	'app_client/common/directives/navigation/navigation.directive.js',
 	'app_client/common/directives/pageHeader/pageHeader.directive.js'
 ].map(function(f) { return fs.readFileSync(f, 'utf8'); });
-console.log(appClientFiles);
+console.log(appClientFiles[0]);
 
 var uglified = uglifyJs.minify(appClientFiles, {compress: false});
 
