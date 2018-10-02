@@ -18,7 +18,7 @@
 				lblLoc: 'Location map',
 				lblAddReview: 'Add review',
 				reviewtitle: 'Customer reviews',
-				key: 'AIzaSyDYw8KXmMJ_zuNYCJOP3vvdiFxbVUshoF4',
+				key: '',
 				sidebar: {
 					context: 'is on MyPlaces because it has accessible wifi and space to sit down with your laptop and get some work done.', 
 					callToAction: 'If you\'ve been and you like it - or if you don\'t - please leave a review to help other people just like you.'
